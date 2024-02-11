@@ -95,6 +95,9 @@ const quiz = document.querySelector('#quiz');
 const template = document.querySelector('template');
 
 const corretas = new Set();
+const totalPerguntas = perguntas.length;
+const mostrarTotal = document.querySelector('#certas span');
+mostrarTotal.textContent = `${corretas.size} de ${totalPerguntas}`;
 
 for(const item of perguntas) {
   // alert(item.pergunta)
@@ -116,6 +119,8 @@ for(const item of perguntas) {
         corretas.add(item);
       }
       //corretas.size para o numero de certas
+
+      mostrarTotal.textContent = `${corretas.size} de ${totalPerguntas}`;
     }
 
     quizItem.querySelector('dl').appendChild(dt);
