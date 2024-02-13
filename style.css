@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body {
+  max-width: 640px;
+  margin: 0 auto;
+} 
+
 #certas {
   text-align: center;
   background-color: #A3E635;
